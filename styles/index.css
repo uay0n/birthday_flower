@@ -1,0 +1,68 @@
+/* birthday_flower_index.css */
+/* 시작레이아웃요소 가운데 배치하는 법 3개 */
+/* 1. text-align */
+/* 2. margin */
+/* 3. flex */
+body {
+    /* display: flex;
+    justify-content: center; */
+    /* text-align: center; */
+    /* text-align은 인라인 자식, 자손에만 적용 */
+}
+main {
+    margin: 0 auto;
+    background-image: url(../images/bg.jpg);
+    width: 402px;
+    min-height: 874px;/* 화면 넘어갈 때 사용 하는 허그의 최소값 지정=min */
+    background-size: 100% auto;
+    background-position: center;
+}
+main .title {
+    text-align: center; 
+    padding-top: 150px;
+    margin-bottom: 198px;/* 먼저 시작한 태그에게 간격 걸어주기 */
+}
+main .title p {
+    font-size: 0.75em; 
+    font-weight: 400;
+    letter-spacing:-0.02em;
+    margin-bottom: 8px;
+}
+main .title h1 {
+    font-size: 1.5em; 
+    font-weight: 600; 
+    letter-spacing:-0.02em;
+}
+main .contents {
+    display: flex;
+    flex-flow: column nowrap;
+    /* 플렉스를 설정한 부모의 자식이 인라인일 경우, 자식이 자동으로 블록 인식이 됨  */
+    align-items: center;
+    /* 메인축의 반대 교차축이 1줄 일 때 가운데 정렬 */
+    gap:6px
+    /* 플렉스 설정 시 자식사인 간격(margin과 효과동일) */
+}
+main .contents * {
+    width: 300px; 
+    height: 42px; 
+    border-radius : 8px;
+    letter-spacing:-0.02em;
+}
+main .contents #user_birthday { /* input태그 입력 전 상태 */
+    border: 1px solid #373737;
+    text-align: center;
+    font-size: 0.875em;
+    color: #000000;/* 사용자가 입력했을 때 글자색상 */
+}
+/* input태그의 placehoder(안내문) 전용 글자색상 */
+main .contents #user_birthday::placeholder {
+    color: rgba(0,0,0,0.4);
+}
+/* input태그가 활성화되었을 때 (커서가 들어오고 입력되는 상황 */
+main .contents #user_birthday:focus {border-color: #f00;}
+/* 버튼 */
+main .contents #birthday_result_btn {
+    background-color: #303030;
+    color: white;
+    font-weight: 600;
+}
