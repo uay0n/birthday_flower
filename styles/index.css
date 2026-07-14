@@ -16,6 +16,7 @@ main {
     min-height: 874px;/* 화면 넘어갈 때 사용 하는 허그의 최소값 지정=min */
     background-size: 100% auto;
     background-position: center;
+    position: relative;
 }
 main .title {
     text-align: center; 
@@ -39,7 +40,7 @@ main .contents {
     /* 플렉스를 설정한 부모의 자식이 인라인일 경우, 자식이 자동으로 블록 인식이 됨  */
     align-items: center;
     /* 메인축의 반대 교차축이 1줄 일 때 가운데 정렬 */
-    gap:6px
+    gap:6px;
     /* 플렉스 설정 시 자식사인 간격(margin과 효과동일) */
 }
 main .contents * {
@@ -64,5 +65,26 @@ main .contents #user_birthday:focus {border-color: #f00;}
 main .contents #birthday_result_btn {
     background-color: #303030;
     color: white;
-    font-weight: 600;
+    font-weight: 400;
+}
+/* ----------------------------------------------flower_popup */
+.flower_popup {
+    background-color: #fff;
+    width: 287px; height: 178px;
+    display: flex; flex-flow: column nowrap;
+    justify-content: center; align-items: center; gap: 10px;
+    z-index: 80;
+    position: absolute; left: 57px; bottom: 350px;
+}
+.flower_popup h2 {font-size: 0.875em;}
+.flower_popup p {font-size: 0.875em;}
+.flower_popup p+p {font-size: 1em; line-height: 1.5;}
+/* -----------------------------------------------------popuo 뒷부분 */
+.popup_bg {
+    display: none;
+    background-color: rgba(0,0,0,0.5);
+    width: 100%; height: 100%;
+    position: absolute;
+    left: 0; top: 0;
+    z-index: 60;
 }
