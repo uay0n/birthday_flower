@@ -69,12 +69,13 @@ main .contents #birthday_result_btn {
 }
 /* ----------------------------------------------flower_popup */
 .flower_popup {
-    background-color: #fff;
-    width: 287px; height: 178px;
+    background-color: rgba(255, 255, 255, 0.92);
+    width: 287px; min-height: 178px;
     display: flex; flex-flow: column nowrap;
     justify-content: center; align-items: center; gap: 10px;
     z-index: 80;
     position: absolute; left: 57px; bottom: 350px;
+    border-radius: 20px;
 }
 .flower_popup h2 {font-size: 0.875em;}
 .flower_popup p {font-size: 0.875em;}
